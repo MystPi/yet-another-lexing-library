@@ -6,6 +6,7 @@ YALL is yet another lexing library for Python, designed for brevity and simplici
 from yall import *
 
 class CalcLexer(Tokenizer):
+	# Tokens are matched from top to bottom, stopping when there's a match.
 	# Tokens must be instances of the 't' class or functions decorated with the 'token' decorator.
 	PLUS   = t(r'\+')
 	MINUS  = t(r'-')
@@ -39,8 +40,8 @@ class CalcLexer(Tokenizer):
 	# To ignore specific characters, just include an 'ignore' variable:
 	ignore = r' '
 	
-	# To ignore spaces AND newlines you would use this regex:
-	# ignore = r' |\n'
+	# To ignore more than one character you would use this regex:
+	# ignore = r' |\n|\t'
 
 
 lexer = CalcLexer()
