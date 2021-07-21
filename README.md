@@ -41,7 +41,7 @@ class CalcLexer(Tokenizer):
 	ignore = r' '
 	
 	# To ignore more than one character you would use this regex:
-	# ignore = r' |\n|\t'
+	# ignore = r'[ \n\t]'
 
 
 lexer = CalcLexer()
